@@ -1,0 +1,9 @@
+﻿<Application x:Class="SQL_Generator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SQL_Generator"
+             StartupUri="Views/MainWindow.xaml">
+    <Application.Resources>
+        <!-- Глобальные ресурсы приложения могут быть определены здесь -->
+    </Application.Resources>
+</Application>

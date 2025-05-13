@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL Generator", "SQL Generator.csproj", "{330AB0DC-1D77-4B6F-9449-A7611D2BC64E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{330AB0DC-1D77-4B6F-9449-A7611D2BC64E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{330AB0DC-1D77-4B6F-9449-A7611D2BC64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{330AB0DC-1D77-4B6F-9449-A7611D2BC64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{330AB0DC-1D77-4B6F-9449-A7611D2BC64E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F04A8492-BEF8-4B39-94B3-0FE01CA35A7D}
+	EndGlobalSection
+EndGlobal
