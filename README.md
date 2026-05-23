@@ -8,6 +8,10 @@
 
 Подходит для обучения SQL, быстрых прототипов и проверки синтаксиса без ручного набора каждого ключевого слова.
 
+![Интерфейс SQL Generator — форма параметров и сгенерированный запрос](docs/screenshot.png)
+
+*На скриншоте: `SELECT` с `LEFT JOIN`, фильтром `WHERE Year > 2000` и сортировкой `ORDER BY Name DESC`.*
+
 ---
 
 ## Содержание
@@ -127,7 +131,7 @@ WHERE id = 5;
 
 ### JOIN (SELECT)
 
-| JOIN | `INNER` |
+| JOIN | `LEFT` |
 | Таблица | `orders` |
 | Столбец | `user_id` |
 | Связь с | `id` (в `users`) |
@@ -135,7 +139,7 @@ WHERE id = 5;
 ```sql
 SELECT id, name, email
 FROM users
-INNER JOIN orders ON orders.user_id = users.id;
+LEFT JOIN orders ON orders.user_id = users.id;
 ```
 
 ---
@@ -169,6 +173,8 @@ Models (SelectQueryBuilder, InsertQueryBuilder, ...)
 
 ```text
 SQL Generator/
+??? docs/
+?   ??? screenshot.png
 ??? Models/
 ?   ??? QueryBuilder.cs
 ?   ??? SelectQueryBuilder.cs
