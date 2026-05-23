@@ -31,6 +31,11 @@ namespace SQL_Generator.Models
         private int? LimitValue { get; set; }
 
         /// <summary>
+        /// Использовать DISTINCT при выборке.
+        /// </summary>
+        private bool UseDistinct { get; set; }
+
+        /// <summary>
         /// Список условий JOIN для объединения таблиц.
         /// </summary>
         private List<string> JoinClauses { get; set; } = new List<string>();
@@ -86,6 +91,15 @@ namespace SQL_Generator.Models
         }
 
         /// <summary>
+        /// Включает DISTINCT в запросе SELECT.
+        /// </summary>
+        public SelectQueryBuilder AddDistinct()
+        {
+            UseDistinct = true;
+            return this;
+        }
+
+        /// <summary>
         /// Добавляет условие JOIN для объединения таблиц.
         /// </summary>
         /// <param name="joinType">Тип соединения (например, INNER, LEFT, RIGHT).</param>
@@ -108,8 +122,8 @@ namespace SQL_Generator.Models
         {
             var query = new StringBuilder();
 
-            // SELECT
-            query.AppendLine($"SELECT {string.Join(", ", Columns.Count > 0 ? Columns : new[] { "*" })}");
+            var columnList = string.Join(", ", Columns.Count > 0 ? Columns : new[] { "*" });
+            query.AppendLine(UseDistinct ? $"SELECT DISTINCT {columnList}" : $"SELECT {columnList}");
 
             // FROM
             query.AppendLine($"FROM {TableName}");
